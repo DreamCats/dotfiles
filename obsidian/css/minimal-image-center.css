@@ -1,0 +1,6 @@
+.theme-light.minimal .markdown-preview-view blockquote img,
+.theme-light.minimal .markdown-source-view blockquote img {
+  margin: 0 auto;
+  display: block;
+}
+
