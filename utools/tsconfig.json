@@ -1,0 +1,14 @@
+{
+    /* 适用于简单的 utools-helper 项目 */
+  "compilerOptions": {
+    /* Modules */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "outDir": "dist",
+    "sourceMap": false,
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "types": ["utools-api-types", "@types/node"]
+  }
+}
