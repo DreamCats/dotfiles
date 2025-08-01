@@ -33,14 +33,17 @@ export PATH="$GOPATH/bin:$PATH"
 export GOPROXY="https://go-mod-proxy.byted.org,https://goproxy.cn,https://proxy.golang.org,direct"
 export GOPRIVATE="*.byted.org,*.everphoto.cn,git.smartisan.com"
 export GOSUMDB="sum.golang.google.cn"
+export GOTOOLCHAIN=local
+
 # BOE环境配置
 export RUNTIME_IDC_NAME=boe
 export APP_ENV=boe
 
 # consul_http环境
 export CONSUL_HTTP_HOST=10.37.50.177
+export BYTED_HOST_IPV6=fdbd:dc01:ff:30c:9d37:9c41:e310:53a8
 export CONSUL_HTTP_PORT=2280
-export TCE_PSM=ecom.video.devops
+export TCE_PSM=ecom.page.tag
 
 # java
 #export PATH="$HOME/.jenv/bin:$PATH"
@@ -55,7 +58,7 @@ export TCE_PSM=ecom.video.devops
 
 # 设置virtualenvwrapper
 export WORKON_HOME=~/Envs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.11
 # 打开终端自动启用
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -68,8 +71,16 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 #[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-export HOMEBREW_NO_AUTO_UPDATE=true
+#byteshell
+[ -f "$HOME/.bytebm/config/config.sh" ] && . "$HOME/.bytebm/config/config.sh"
 
+
+export HOMEBREW_NO_AUTO_UPDATE=true
+export NODE_NO_WARNINGS=1
+
+# ollama
+export OLLAMA_HOST=localhost
+export OLLAMA_ORIGINS=app://obsidian.md*
 
 # alias
 
@@ -79,3 +90,27 @@ alias gocover="go tool cover -html=cover.out"
 export HOMEBREW_GITHUB_API_TOKEN=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
 alias lg="lazygit"
 alias gti="gitui"
+
+# tmux
+alias tnew="tmux new -s"
+alias tks="tmux kill -session -t"
+alias ta="tmux a -t"
+alias tl="tmux ls"
+alias gcof='gco "$(gb | fzf)"'
+
+
+. "$HOME/.local/bin/env"
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# bun completions
+[ -s "/Users/bytedance/.bun/_bun" ] && source "/Users/bytedance/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+export GOOGLE_CLOUD_PROJECT="maifeng"
+export ANTHROPIC_AUTH_TOKEN=sk-r1bNWhwH0ygKQ31Q2837LH9fJ7ZZnLBxaGWVaNOHpov3DRKJ
+export ANTHROPIC_BASE_URL=https://api.moonshot.cn/anthropic
