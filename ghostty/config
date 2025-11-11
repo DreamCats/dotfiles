@@ -1,0 +1,42 @@
+#GG 字体
+font-size = 14
+bold-is-bright = true
+font-family = "Maple Mono NF CN"
+macos-titlebar-proxy-icon=hidden
+
+# 光标
+cursor-style = block
+cursor-style-blink = false
+
+# 鼠标
+mouse-scroll-multiplier = 2
+mouse-hide-while-typing = true
+
+# 窗口
+background-opacity = 0.85
+window-padding-balance = true
+window-step-resize = false
+resize-overlay = never
+background-blur-radius = 15
+initial-window = true
+window-save-state = always
+confirm-close-surface = false
+shell-integration = detect
+macos-titlebar-style = hidden
+
+# 行为
+auto-update = check
+auto-update-channel = stable
+quit-after-last-window-closed = true
+shell-integration-features = true
+
+# macos
+macos-option-as-alt = true
+macos-titlebar-style = transparent
+
+# 剪贴板
+copy-on-select = clipboard
+clipboard-trim-trailing-spaces = true
+
+# 主题
+theme = Catppuccin Mocha

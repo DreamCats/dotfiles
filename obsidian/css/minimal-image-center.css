@@ -1,9 +1,0 @@
-/* 适配 minimal 主题，强制内部嵌入图片水平居中 */
-.theme-light.minimal .markdown-preview-view .internal-embed img,
-.theme-light.minimal .markdown-source-view .internal-embed img {
-  display: block;          /* 转为块状元素，margin:auto 才生效 */
-  margin: 0 auto;          /* 水平居中核心逻辑 */
-  max-width: 100%;         /* 避免超宽溢出，适配响应式 */
-  height: auto;            /* 保持宽高比 */
-}
-

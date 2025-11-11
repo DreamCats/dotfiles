@@ -22,6 +22,8 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+#------------我的脚本--------#
+[[ ! -f ~/.zsh_script.zsh ]] || source ~/.zsh_script.zsh
 
 # =======alias config
 # alias classdb='mycli -h 10.225.109.181 -P 3306 -uclassroom_w -pOkakLOgjcVEPjJX_LCLWJuu3mgjybiJ3'
@@ -111,6 +113,3 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 
-export GOOGLE_CLOUD_PROJECT="maifeng"
-export ANTHROPIC_AUTH_TOKEN=sk-r1bNWhwH0ygKQ31Q2837LH9fJ7ZZnLBxaGWVaNOHpov3DRKJ
-export ANTHROPIC_BASE_URL=https://api.moonshot.cn/anthropic
