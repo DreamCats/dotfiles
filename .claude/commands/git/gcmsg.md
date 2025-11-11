@@ -1,3 +1,8 @@
+---
+description: 一键完成 commit（自动生成符合规范的提交信息）
+description-hint: "[可选前缀]..."
+---
+
 # commit
 
 在 Git 仓库中一键完成提交：自动暂存、分析变更、生成符合 Conventional Commits 规范的提交信息，并直接完成提交。适合希望快速、规范地记录代码历史的场景。
