@@ -1,0 +1,121 @@
+{
+  "version": "1.0",
+  "description": "Skill activation triggers for Claude Code. Controls when skills automatically suggest or block actions.",
+  "skills": {
+    "skill-developer": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "description": "Meta-skill for creating and managing Claude Code skills",
+      "promptTriggers": {
+        "keywords": [
+          "skill system",
+          "create skill",
+          "add skill",
+          "skill triggers",
+          "skill rules",
+          "hook system",
+          "skill development",
+          "skill-rules.json",
+          "generate skill",
+          "技能",
+          "创建技能"
+        ],
+        "intentPatterns": [
+          "(how do|how does|explain).*?skill",
+          "(create|add|modify|build).*?skill",
+          "skill.*?(work|trigger|activate|system)"
+        ]
+      }
+    },
+    "mcp-builder": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers",
+      "promptTriggers": {
+        "keywords": [
+          "mcp server",
+          "model context protocol",
+          "mcp builder",
+          "create mcp",
+          "build mcp",
+          "mcp integration",
+          "mcp tools",
+          "mcp api",
+          "fastmcp",
+          "mcp sdk"
+        ],
+        "intentPatterns": [
+          "(create|build|make).*?mcp.*?server",
+          "(how to|guide).*?mcp.*?server",
+          "mcp.*?(integration|api|tools)",
+          "(external|third party).*?mcp"
+        ]
+      }
+    },
+    "utools": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "description": "uTools is a cross-platform toolbox with plugins for daily tasks",
+      "promptTriggers": {
+        "keywords": [
+          "utools",
+          "utools plugin",
+          "utools integration",
+          "cross-platform toolbox",
+          "productivity tools",
+          "workflow automation",
+          "desktop utilities"
+        ],
+        "intentPatterns": [
+          "(install|use|setup).*?utools",
+          "utools.*?(plugin|extension)",
+          "(productivity|workflow).*?tool"
+        ]
+      }
+    },
+    "time-tools": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "description": "时间工具集 - 提供获取当前时间（格式化）、当前时间戳、范围时间、范围时间戳、指定时区的时间、指定时区的时间戳、近期时间戳范围（近5分钟、15分钟、30分钟等）功能",
+      "promptTriggers": {
+        "keywords": [
+          "时间",
+          "时间戳",
+          "当前时间",
+          "范围时间",
+          "时区时间",
+          "timestamp",
+          "datetime",
+          "time range",
+          "timezone"
+        ],
+        "intentPatterns": [
+          "(获取|查询|生成).*?(时间|时间戳|范围|时区)",
+          "(how to|get|generate).*?(time|timestamp|datetime|range|timezone)"
+        ]
+      }
+    }
+  },
+  "notes": {
+    "enforcement_types": {
+      "suggest": "Skill suggestion appears but doesn't block execution",
+      "block": "Requires skill to be used before proceeding (guardrail)",
+      "warn": "Shows warning but allows proceeding"
+    },
+    "priority_levels": {
+      "critical": "Highest - Always trigger when matched",
+      "high": "Important - Trigger for most matches",
+      "medium": "Moderate - Trigger for clear matches",
+      "low": "Optional - Trigger only for explicit matches"
+    },
+    "customization": {
+      "pathPatterns": "Adjust to match your project structure (blog-api, auth-service, etc.)",
+      "keywords": "Add domain-specific terms relevant to your project",
+      "intentPatterns": "Use regex for flexible user intent matching"
+    }
+  }
+}
