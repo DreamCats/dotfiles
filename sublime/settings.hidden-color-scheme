@@ -1,0 +1,93 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	// 1. 主题 & 配色
+	"ignored_packages":
+	[
+		"Vintage",
+    ],
+	"index_files": true,
+	"theme": "Adaptive.sublime-theme",
+	"color_scheme": "Catppuccin Mocha.sublime-color-scheme",
+	"catppuccin_accent": "pink",
+	"catppuccin_bold_keywords": true,
+	"catppuccin_italic_comments": false,
+	"catppuccin_bracket_mode": "nvim",           // 类似 neovim 彩虹括号
+	"highlight_line": true,
+	"always_show_minimap_viewport": false,       // 等同 minimap.enabled: false
+    "fade_fold_buttons": true,
+    
+    // 2. 标签栏 & 编辑器组
+    "enable_tab_scrolling": false,               // 标签过多时不出现左右箭头
+    "mouse_wheel_switches_tabs": false,
+    "close_windows_when_empty": true,            // 关闭最后一个文件时关闭窗口
+    "preview_on_click": "only_left",             // 单击预览，双击固定
+    "open_files_in_new_window": false,           // 同 VS Code 的 off
+    "remember_open_files": true,
+    "hot_exit": "always",                        // 退出时自动保存工作区
+
+    // 3. 窗口 / 标题栏
+    "show_title_bar": false,                     // 完全隐藏标题栏（Linux/Win）
+    "show_rel_path": false,                      // 不在标题栏显示路径
+    "show_encoding": false,
+    "show_line_endings": false,
+
+    // 4. 侧边栏 & 资源管理器
+    "show_sidebar": true,
+    "tree_animation_enabled": false,             // 减少动画
+    "indent_subsequent_lines": true,
+    "sidebar_default": true,                     // 启动时显示侧边栏
+    "show_git_status": true,                     // 文件徽章
+    "show_file_icons": true,
+    "row_padding": [6, 4],                       // 让行高一点，类似 VS Code
+
+ 	// 5. 滚动 & 光标
+    "smooth_scrolling": true,
+    "scroll_speed": 1.0,
+    "scroll_past_end": true,
+    "line_padding_top": 2,
+    "line_padding_bottom": 2,
+    "caret_style": "smooth",                     // 光标闪烁 smooth
+    "caret_extra_top": 3,
+    "caret_extra_bottom": 3,
+    "caret_extra_width": 2,
+    "block_caret": false,
+
+    // 6. 字体
+    "font_face": "Maple Mono",
+    "font_size": 14,
+    "font_options": ["gray_antialias", "subpixel_antialias"],
+    "enable_font_ligatures": true,
+
+     // 7. 行号 & 折叠
+    // "line_numbers": "relative",                  // 相对行号
+    /*"fold_buttons": true,*/
+    /*"fade_fold_buttons": false,*/
+    // "fold_style": "manual",
+    // "default_encoding": "UTF-8",
+    // "default_line_ending": "unix",
+
+    // 8. 自动完成 / 括号 / 引号
+    "match_brackets_angle": true,
+    "indent_to_bracket": true,
+
+	// 9. 搜索
+    "use_regex_find_in_files": true,
+    "show_context": true,                        // 搜索结果带行上下文
+    "binary_file_patterns": ["*.jpg", "*.png", "*.gif", "*.svg", "*.ico",
+                             "*.pdf", "*.zip", "*.tar", "*.gz", "*.pyc",
+                             "**/node_modules/**", "**/.git/**"],
+    "file_exclude_patterns": [
+        "**/.classpath",
+        "**/.project",
+        "**/.settings",
+        "**/.factorypath",
+        "**/node_modules/**",
+        "**/.git/**",
+        "**/.DS_Store"
+    ],
+    "folder_exclude_patterns": ["node_modules", ".git", "dist", "build"],
+
+    // 10. 其他
+    "update_check": false,                     // 关闭自动更新弹窗
+}
